@@ -1,0 +1,29 @@
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-database.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "**************************************",
+    authDomain: "notsoawsome-5f3bb.firebaseapp.com",
+    databaseURL: "https://notsoawsome-5f3bb.firebaseio.com",
+    projectId: "notsoawsome-5f3bb",
+    storageBucket: "",
+    messagingSenderId: "968024865442",
+    appId: "1:968024865442:web:b99a54374f62c9689e35fb"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  var database = firebase.database();
+  var ref = database.ref('scores');
+  var data ={
+      name : "sali",
+      score: 30
+  }
+  ref.push(data);
+  console.log(data);
+</script>
